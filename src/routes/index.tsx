@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CONTACT = "https://mh-digital-solution.com";
+const CONTACT = "https://wa.me/21658146177?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20MHFac";
 
 const features = [
   { icon: FileText, t: "Devis", d: "Créez, envoyez et suivez l'acceptation, puis convertissez en facture en un clic." },
@@ -72,7 +72,7 @@ function Index() {
             <a href="#securite" className="hover:text-primary">Sécurité</a>
             <a href="#offres" className="hover:text-primary">Offres</a>
           </nav>
-          <a href={CONTACT} className="rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-primary-foreground">Demander une démo</a>
+          <a href={CONTACT} className="rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-primary-foreground">Contact WhatsApp</a>
         </div>
       </header>
 
@@ -92,7 +92,7 @@ function Index() {
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-4">
               <Cta>Voir les offres <ArrowRight className="size-4" /></Cta>
-              <Cta href={CONTACT} ghost>Demander une démo</Cta>
+              <Cta href={CONTACT} ghost>Contact WhatsApp</Cta>
             </div>
           </div>
 
@@ -228,7 +228,7 @@ function Index() {
           <div className="relative">
             <h2 className="font-display text-4xl md:text-5xl">Prêt à simplifier votre facturation ?</h2>
             <p className="mx-auto mt-4 max-w-xl text-ink-muted">Rejoignez les entreprises tunisiennes qui gèrent leur activité avec MHFac.</p>
-            <div className="mt-8 flex justify-center"><Cta href={CONTACT}>Demander une démo <ArrowRight className="size-4" /></Cta></div>
+            <div className="mt-8 flex justify-center"><Cta href={CONTACT}>Contact WhatsApp <ArrowRight className="size-4" /></Cta></div>
           </div>
         </div>
       </section>
