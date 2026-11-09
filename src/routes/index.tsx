@@ -20,7 +20,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const CONTACT = "https://wa.me/21658146177?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20MHFac";
+const wa = (msg: string) => "https://wa.me/21658146177?text=" + encodeURIComponent(msg);
+const CONTACT = wa("Bonjour, je souhaite en savoir plus sur MHFac");
 
 const features = [
   { icon: FileText, t: "Devis", d: "Créez, envoyez et suivez l'acceptation, puis convertissez en facture en un clic." },
@@ -212,7 +213,7 @@ function Index() {
                     </li>
                   ))}
                 </ul>
-                <a href={CONTACT} className={`mt-8 rounded-full py-3 text-center font-bold transition ${hot ? "bg-brand text-primary-foreground" : "border border-border hover:border-primary hover:text-primary"}`}>
+                <a href={wa(`Bonjour, je suis intéressé(e) par le pack ${pl.n} de MHFac`)} className={`mt-8 rounded-full py-3 text-center font-bold transition ${hot ? "bg-brand text-primary-foreground" : "border border-border hover:border-primary hover:text-primary"}`}>
                   {pl.y ? "Choisir " + pl.n : "Nous contacter"}
                 </a>
               </div>
